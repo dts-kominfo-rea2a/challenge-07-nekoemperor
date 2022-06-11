@@ -22,16 +22,11 @@ const promiseOutput = async (param) => {
       }
     }
 
-    if (param === "marah") {
-      let emotMarah = arrEmotions.filter(
-        (emotion) => emotion.toLowerCase() === "marah"
+    if (param) {
+      let emotion = arrEmotions.filter(
+        (element) => element.toLowerCase() === param
       );
-      return emotMarah.length;
-    } else if (param === "tidak marah") {
-      let emotTidakMarah = arrEmotions.filter(
-        (emotion) => emotion.toLowerCase() === "tidak marah"
-      );
-      return emotTidakMarah.length;
+      return emotion.length;
     }
   } catch (err) {
     console.log(err);
